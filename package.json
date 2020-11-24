@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sls offline start -s local"
+    "start": "sls offline start --noPrependStageInUrl"
   },
   "keywords": [],
   "author": {

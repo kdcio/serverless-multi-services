@@ -1,3 +1,6 @@
+authorizer:
+  name: ${self:service}-authorizer-${self:provider.stage}
+  handler: src/authorizer.handler
 create:
   name: ${self:service}-create-${self:provider.stage}
   handler: src/create.handler
@@ -6,6 +9,7 @@ create:
         path: ${self:service}
         method: post
         cors: true
+        authorizer: authorizer
 read:
   name: ${self:service}-read-${self:provider.stage}
   handler: src/read.handler
@@ -22,6 +26,7 @@ update:
         path: ${self:service}/{id}
         method: put
         cors: true
+        authorizer: authorizer
 delete:
   name: ${self:service}-delete-${self:provider.stage}
   handler: src/delete.handler
@@ -30,6 +35,7 @@ delete:
         path: ${self:service}/{id}
         method: delete
         cors: true
+        authorizer: authorizer
 list:
   name: ${self:service}-list-${self:provider.stage}
   handler: src/list.handler

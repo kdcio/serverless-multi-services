@@ -1,19 +1,62 @@
-POST http://localhost:3000/local/service-a
+### service-a
+
+POST http://localhost:3000/service-a
 
 ###
 
-GET http://localhost:3000/local/service-a/1
-
-
-###
-
-PUT http://localhost:3000/local/service-a/2
+GET http://localhost:3000/service-a/1
 
 
 ###
 
-DELETE http://localhost:3000/local/service-a/3
+PUT http://localhost:3000/service-a/2
 
 ###
 
-GET http://localhost:3000/local/service-a
+DELETE http://localhost:3000/service-a/3
+
+###
+
+GET http://localhost:3000/service-a
+
+### service-b
+
+POST http://localhost:3000/service-b/
+
+###
+
+GET http://localhost:3000/service-b/1
+
+###
+
+PUT http://localhost:3000/service-b/2
+
+
+###
+
+DELETE http://localhost:3000/service-b/3
+
+###
+
+GET http://localhost:3000/service-b
+
+### service-c
+
+POST http://localhost:3000/service-c
+
+###
+
+GET http://localhost:3000/service-c/1
+
+
+###
+
+PUT http://localhost:3000/service-c/2
+
+###
+
+DELETE http://localhost:3000/service-c/3
+
+###
+
+GET http://localhost:3000/service-c

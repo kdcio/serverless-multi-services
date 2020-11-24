@@ -7,6 +7,13 @@ const renameFunctions = (serviceName, basePath, funcs) => {
   keys.forEach((k) => {
     const func = funcs[k];
     func.handler = `${basePath}${func.handler}`;
+    if (func.events) {
+      func.events = func.events.map((e) => {
+        if (!e.http || !e.http.authorizer) return e;
+        e.http.authorizer = `${serviceName}-${e.http.authorizer}`;
+        return e;
+      });
+    }
     functions[`${serviceName}-${k}`] = funcs[k];
   });
   return functions;
