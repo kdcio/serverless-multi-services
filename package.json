@@ -1,0 +1,24 @@
+{
+  "name": "serverless-multi-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ian Dela Cruz",
+    "email": "ian@kdcsoftware.com",
+    "url": "https://www.kdcsoftware.com"
+  },
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "serverless-bundle": "^4.1.0",
+    "serverless-offline": "^6.8.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

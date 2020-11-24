@@ -1,0 +1,18 @@
+service: service-a
+
+package:
+  individually: true
+
+plugins:
+  - serverless-bundle
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128
+  stage: ${opt:stage, 'local'}
+  region: ${file(./config.yml):REGION, 'localhost'}
+  profile: ${file(./config.yml):PROFILE, 'default'}
+
+functions: ${file(./functions.yml)}

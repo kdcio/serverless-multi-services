@@ -1,0 +1,21 @@
+{
+  "name": "service-a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sls offline start -s local"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ian Dela Cruz",
+    "email": "ian@kdcsoftware.com",
+    "url": "https://www.kdcsoftware.com"
+  },
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "serverless-bundle": "^4.1.0",
+    "serverless-offline": "^6.8.0"
+  }
+}
