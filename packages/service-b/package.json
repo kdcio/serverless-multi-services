@@ -17,5 +17,9 @@
   "devDependencies": {
     "serverless-bundle": "^4.1.0",
     "serverless-offline": "^6.8.0"
+  },
+  "dependencies": {
+    "@kdcio/api-gw-resp": "^1.3.1",
+    "@kdcio/aws-policy": "^0.3.0"
   }
 }
