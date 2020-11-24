@@ -1,4 +1,4 @@
-service: service-a
+service: service-b
 
 package:
   individually: true

@@ -1,0 +1,40 @@
+create:
+  name: ${self:service}-create-${self:provider.stage}
+  handler: src/create.handler
+  events:
+    - http:
+        path: ${self:service}
+        method: post
+        cors: true
+read:
+  name: ${self:service}-read-${self:provider.stage}
+  handler: src/read.handler
+  events:
+    - http:
+        path: ${self:service}/{id}
+        method: get
+        cors: true
+update:
+  name: ${self:service}-update-${self:provider.stage}
+  handler: src/update.handler
+  events:
+    - http:
+        path: ${self:service}/{id}
+        method: put
+        cors: true
+delete:
+  name: ${self:service}-delete-${self:provider.stage}
+  handler: src/delete.handler
+  events:
+    - http:
+        path: ${self:service}/{id}
+        method: delete
+        cors: true
+list:
+  name: ${self:service}-list-${self:provider.stage}
+  handler: src/list.handler
+  events:
+    - http:
+        path: ${self:service}
+        method: get
+        cors: true

@@ -1,4 +1,4 @@
-service: service-a
+service: serverless-multi-services
 
 package:
   individually: true
@@ -15,4 +15,4 @@ provider:
   region: localhost
   profile: default
 
-functions: ${file(./functions.yml)}
+functions: ${file(./functions.js)}
